@@ -1,0 +1,25 @@
+{
+  "name": "performance-monitor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx babel-node src/index.js",
+    "start:no-ui": "UI_DISABLED=TRUE npx babel-node src/index.js",
+    "dev": "npx nodemon --exec yarn start",
+    "curl:get": "curl \"localhost:3000/people\"",
+    "curl:post": "curl -X POST --data '{\"name\": \"johndoe\"}' \"localhost:3000/people\""
+  },
+  "dependencies": {
+    "@babel/core": "7.18.10",
+    "@babel/node": "7.18.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-class-static-block": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "7.18.10",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
